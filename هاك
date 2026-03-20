@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>System Hack</title>
+<style>
+body {
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 100px;
+}
+input, button {
+    padding: 10px;
+    font-size: 18px;
+    margin: 10px;
+}
+#result {
+    margin-top: 30px;
+    font-size: 24px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Secure Login System</h1>
+
+<input type="text" id="name" placeholder="على مان">
+<br>
+<button onclick="hack()">تسجيل الدخول</button>
+
+<div id="result"></div>
+
+<script>
+function hack() {
+    let name = document.getElementById("name").value;
+
+    let text = "جاري الاختراق...\n";
+    document.getElementById("result").innerText = text;
+
+    setTimeout(() => {
+        document.getElementById("result").innerText =
+        "تم تهكير حساب " + name + " بنجاح 😈";
+    }, 2000);
+}
+</script>
+
+</body>
+</html>
